@@ -1,0 +1,11 @@
+#! /bin/bash
+
+git for-each-ref --shell --format='%(refname)' --sort='committerdate' refs/remotes | \
+while read branch
+do
+	branchname=`echo $branch | sed -e s/\'//g`	
+	if [[ `echo $branchname` != 'refs/remotes/origin/HEAD' && `echo $branchname` != 'refs/remotes/origin/master' && `echo $branchname` != 'refs/remotes/origin/develop' ]]
+	then
+		echo -e `git show --format='%C(yellow)%d%Creset - %Cgreen%cN%Creset - %C(magenta)%cr%Creset - %s' $branchname | head -n 1`
+	fi
+done

@@ -1,0 +1,20 @@
+[user]
+	name = Pierre-Jean Vardanega
+	email = pierrejean.vardanega@gmail.com
+[merge]
+	ff = false
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	sh = stash
+	lg = log --oneline --graph --pretty=format:'%C(yellow)%h%Creset -%d %s - %C(green)%an%Creset %Cblue(%cr)'
+[color]
+	ui = true
+[core]
+	autocrlf = input
+	editor = vim
+[branch]
+	autosetuprebase = always
+[pull]
+	ff = true
