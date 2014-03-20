@@ -1,0 +1,57 @@
+# VARS
+JAVA7_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home"
+JAVA8_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/"
+
+# ALIASES
+alias ll='ls -l -G'
+alias lla='ls -la -G'
+alias java7="export JAVA_HOME=$JAVA7_HOME"
+alias java8="export JAVA_HOME=$JAVA8_HOME"
+
+# DEV
+export DEV=~/dev
+export PATH=$DEV/bin:$PATH
+
+# LIBON
+export OV=~/dev/sources/ov
+alias archiver='cd ~/dev/sources/ov/server-archiver'
+alias auth='cd ~/dev/sources/ov/server-auth'
+alias jcuke='cd ~/dev/sources/ov/server-cuke'
+alias cuke='cd ~/dev/sources/ov/server-cucumber'
+alias config='cd ~/dev/sources/ov/libon-server-config'
+export ON_HOME=~/dev/tools/tomcat7/temp/onhome
+
+# JAVA
+export JAVA_HOME=$JAVA7_HOME
+export JAVA_OPTS='-Xms512m -Xmx1024m -XX:MaxPermSize=512m'
+export PATH=$PATH:$JAVA_HOME/bin
+
+# MAVEN
+export MAVEN_OPTS='-Xmx512m'
+
+# BREW
+export PATH=/usr/local/bin:$PATH
+
+# GIT
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWUPSTREAM="verbose"
+PS1='\u@\h: \[\033[0;34m\]\W\[\033[0;37m\]$(__git_ps1 " (\[\033[0;32m\]%s\[\033[0;37m\])")\$ '
+
+# CASSANDRA 
+export CASSANDRA_HOME=~/dev/tools/cassandra
+export PATH=$PATH:$CASSANDRA_HOME/bin
+
+# GRAILS
+export GRAILS_HOME=~/dev/sdk/grails
+export PATH=$GRAILS_HOME/bin:$PATH
+
+# CLOUDBEES
+export BEES_HOME=~/dev/sdk/cloudbees-sdk-1.5.2
+export PATH=$PATH:$BEES_HOME
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
