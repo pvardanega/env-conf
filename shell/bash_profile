@@ -16,6 +16,7 @@ export PATH=$DEV/bin:$PATH
 export OV=~/dev/sources/ov
 alias archiver='cd ~/dev/sources/ov/server-archiver'
 alias auth='cd ~/dev/sources/ov/server-auth'
+alias common='cd ~/dev/sources/ov/server-common'
 alias jcuke='cd ~/dev/sources/ov/server-cuke'
 alias cuke='cd ~/dev/sources/ov/server-cucumber'
 alias config='cd ~/dev/sources/ov/libon-server-config'
@@ -33,6 +34,7 @@ export MAVEN_OPTS='-Xmx512m'
 export PATH=/usr/local/bin:$PATH
 
 # GIT
+alias gpr='git pull --rebase'
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
