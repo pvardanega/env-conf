@@ -12,6 +12,9 @@ alias java8="export JAVA_HOME=$JAVA8_HOME"
 export DEV=~/dev
 export PATH=$DEV/bin:$PATH
 
+# 2laps
+export 2L=~/dev/sources/2laps
+
 # LIBON
 export OV=~/dev/sources/ov
 alias archiver='cd ~/dev/sources/ov/server-archiver'
