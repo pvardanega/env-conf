@@ -13,7 +13,7 @@ export DEV=~/dev
 export PATH=$DEV/bin:$PATH
 
 # 2laps
-export 2L=~/dev/sources/2laps
+alias 2laps='cd ~/dev/sources/2laps/2laps-web'
 
 # LIBON
 export OV=~/dev/sources/ov
